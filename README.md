@@ -1,7 +1,7 @@
 
 # 🔱 CodieOS Triadic Resonance: A Constructive Proof of the Erdős–Straus Conjecture
 
-This project presents a complete, constructive solution to the Erdős–Straus Conjecture:
+This project presents a proposed constructive solution to the Erdős–Straus Conjecture:
 
 > For all integers n ≥ 2,  
 > there exist positive integers x, y, z such that:  
