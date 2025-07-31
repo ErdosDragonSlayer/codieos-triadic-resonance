@@ -1,6 +1,8 @@
 
 # 🔱 CodieOS Triadic Resonance: A Constructive Proof of the Erdős–Straus Conjecture
 
+The Erdős–Straus Conjecture, proposed in 1948, asks whether every rational number of the form 4/n can be expressed as the sum of three unit fractions. Despite extensive computational verification (up to 10^17), no constructive proof had been accepted. This repository presents a framework toward such a proof using symbolic and computational methods.
+
 This project presents a proposed constructive solution to the Erdős–Straus Conjecture:
 
 > For all integers n ≥ 2,  
