@@ -1,4 +1,4 @@
-# Symbolic Signature of Failure in the Erdős–Straus Conjecture Constructive Engine
+#  A tiered constructive engine and large-scale failure analysis for the Erdős–Straus conjecture
 
 ## Preface
 
