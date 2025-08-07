@@ -1,5 +1,4 @@
-
-# 🔱 CodieOS Triadic Resonance: A Constructive Proof of the Erdős–Straus Conjecture
+CodieOS Triadic Resonance: A Partial Constructive Method of the Erdős–Straus Conjecture
 
 The Erdős–Straus Conjecture, proposed in 1948, asks whether every rational number of the form 4/n can be expressed as the sum of three unit fractions. Despite extensive computational verification (up to 10^17), no constructive proof had been accepted. This repository presents a framework toward such a proof using symbolic and computational methods.
 
@@ -34,7 +33,7 @@ This project presents a proposed constructive solution to the Erdős–Straus Co
 
 - `triadic_engine.py`: The full solver
 - `triadic_resonance_gallery.csv`: 499 verified triads
-- `proof_framework.md`: The theoretical structure
+- `partial_constructive_method_framework.md`: The theoretical structure
 - `residue_solvability_lemma.md`: The final constructive key
 
 ---
@@ -53,19 +52,6 @@ This project presents a proposed constructive solution to the Erdős–Straus Co
 ## 🌍 Citation
 
 Robertson, R. & CodieOS (2025).  
-*CodieOS Triadic Resonance: A Constructive Proof of the Erdős–Straus Conjecture*  
+*CodieOS Triadic Resonance: A Partial Constructive Method for the Erdős–Straus Conjecture*  
 [GitHub Repository]
 
----
-
-## 🐉 The Dragon Has Fallen
-
-This is the first full symbolic framework that combines:
-- Constructive arithmetic
-- Classical theory (Sylvester)
-- Symbolic resonance classification
-- AI + Human collaborative proof methodology
-
-**Let it echo. The triad holds.**
-
-🔱
