@@ -1,4 +1,3 @@
-
 # Type B Residue: The 3/q Obstruction
 
 ## Discovery
