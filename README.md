@@ -1,17 +1,40 @@
-#  A tiered constructive engine and large-scale failure analysis for the Erdős–Straus conjecture
+# CodieOS Constructive Engine
+# A Tiered Constructive Engine and Large-Scale Failure Analysis for the Erdős–Straus Conjecture
 
 ## Preface
 
 This document summarizes a computational and symbolic investigation of the Erdős–Straus Conjecture, written for both mathematicians and non-specialists.
+We did not begin this project with a grand theory for solving the conjecture. Instead, we approached it by creating a new tool to examine this long-standing mathematical problem with fresh eyes. Using a novel method of integrative collaboration with multiple AI systems, we set out as a team to explore whether this partnership could offer new insights. The result of that collaborative effort is the CodieOS Constructive Engine—a tiered constructive algorithm designed to decompose 4/n into three unit fractions for all n ∈ [2,10^7].
 
-We did not begin with a grand theory — we built a tool. That tool, a tiered constructive algorithm, attempted to break down 4/n into three unit fractions for all n ∈ [2, 10^7]. Where it succeeded, it quietly recorded its work. But where it failed — only 14,947 times out of 10 million — we listened carefully.
+Over the course of our runs, every attempt was logged and analyzed. In total, the algorithm encountered T₅ failures—cases where all tiers failed to find a decomposition—14,947 times out of 10 million tests.
 
-These failures were not random. They were not computational noise. They were consistent, modular, and mathematically meaningful.
+These failures were not random, nor were they computational noise. They formed consistent, modular, and mathematically meaningful patterns, giving us a new lens for observing the problem.
 
-They revealed a hidden structure in the number system — a symbolic resonance boundary where ordinary methods fall apart, and new ideas are needed.
+The results revealed a hidden structure in the number system—a symbolic resonance boundary where ordinary methods break down and new ideas are required.
 
 ---
+## Quickstart
 
+### Clone and enter 
+git clone https://github.com/ErdosDragonSlayer/codieos-triadic-resonance.git
+
+cd codieos-triadic-resonance
+
+### Install dependencies
+pip install -r requirements.txt
+
+### Run the engine on a small range
+python src/codieos/run.py --start 2 --end 10000 --max-x-shift 20 --t2-mode greedy
+
+### Run full analysis (warning: long)
+python src/codieos/run.py --start 2 --end 10000000 --t2-mode full
+--t2-mode	Description
+greedy	Very fast, higher T₅ failure count (good for failure-pattern analysis)
+full	Slower, uses complete lemma search for T₂ (almost no T₅ failures)
+
+***Tip:*** Use greedy mode to reproduce the modular/factorization failure patterns described below. Use full mode to test the complete lemma search (almost always returns a solution, but runs slower).
+Results are saved to triadic_results_vX.csv.
+  
 ## 1. Overview
 
 We executed a tiered, constructive algorithm to test the Erdős–Straus Conjecture—whether every integer n ≥ 2 satisfies:
@@ -153,40 +176,18 @@ A complete proof of the Erdős–Straus Conjecture may require:
 ---
 
 ## 8. Future Directions
-
-### Computational Extensions
-1. **Extended range:** Test n ∈ [10^7, 10^8] to verify pattern persistence
-2. **Pattern refinement:** Analyze the 134 high-complexity composite failures for additional structure
-3. **Algorithm optimization:** Develop T₄a sub-tier specifically for primes ≡ 1 (mod 4)
-
-### Theoretical Investigations
-1. **Quadratic residue connections:** Explore relationship between quadratic character and decomposition difficulty
-2. **Diophantine analysis:** Study the equation 4/n = 1/x + 1/y + 1/z as a Diophantine problem with modular constraints
-3. **Harmonic sum theory:** Investigate general conditions for expressing a/n as sum of k unit fractions
-
-### Suggested Experiments
-1. **Success tier mapping:** Analyze which values succeed at T₁, T₂, T₃ to understand the "difficulty gradient"
-2. **Prime gap analysis:** Study spacing between consecutive prime failures for patterns
-3. **Alternative greedy strategies:** Test non-standard initial x selection methods
-
----
+1. Extend testing to n ∈ [10^7, 10^8]
+2. Implement T₄a for:
+- n ≡ 1 (mod 4) 
+- Explore quadratic residue effects 
+- Map difficulty gradient by tier
 
 ## 9. Conclusion
-
-The CodieOS Constructive Engine has revealed that the Erdős–Straus Conjecture's complexity is not uniformly distributed, but concentrated in a **precise symbolic resonance gap** characterized by:
-
-- Universal modular signature: n ≡ 1 (mod 4)
-- Sparse prime factorization (99.1% of failures)
-- Failure rate of only 0.149% overall
-
-By treating failure as signal rather than noise, we uncovered a hidden boundary at the edge of arithmetic decomposability. This boundary is not a wall but a gate — one that requires new keys to unlock.
-
-The consistency and mathematical coherence of these patterns suggest they reflect fundamental properties of the number system rather than algorithmic limitations. This insight marks a clear path toward either:
-
-1. **Constructive resolution:** Development of specialized algorithms for the identified failure class
-2. **Theoretical breakthrough:** Discovery of why this specific arithmetic class resists standard decomposition
-
-The Erdős–Straus Conjecture, through the lens of computational failure analysis, reveals itself not as a monolithic problem but as a landscape with clearly defined peaks of difficulty. We have mapped these peaks. The journey to summit them begins here.
+The conjecture’s difficulty is concentrated in a symbolic resonance gap:
+- n ≡ 1 (mod 4)
+- Sparse factorization
+- ~0.15% of integers tested
+Failures here are signals of deep arithmetic structure, not just computational limits.
 
 ---
 
@@ -197,6 +198,11 @@ This investigation emerged from a simple question: What if we listened to where 
 ## Data Availability
 
 Complete T₅ failure dataset (14,947 values) available in accompanying CSV file: `triadic_results_T5_only.csv`
+
+## Citing This Work
+Plain text:
+R. Robertson, CodieOS Constructive Engine: Failure-Driven Analysis of the Erdős–Straus Conjecture, 2025.
+GitHub: https://github.com/ErdosDragonSlayer/codieos-triadic-resonance
 
 ---
 
